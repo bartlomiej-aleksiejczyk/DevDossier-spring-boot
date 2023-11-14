@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <ul>
+        <li th:each="app : ${appsPage.content}">
+            <span th:text="${app.name}">App Name</span>
+        </li>
+    </ul>
+</div>
+
+<!--<div>
+    <a th:href="@{/apps(page=${appPage.number - 1}, size=${appPage.size})}" th:unless="${appPage.first}">Previous</a>
+    <span th:text="${appPage.number + 1}">Page Number</span>
+    <a th:href="@{/apps(page=${appPage.number + 1}, size=${appPage.size})}" th:unless="${appPage.last}">Next</a>
+</div>-->
+
+</body>
+</html>
